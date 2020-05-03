@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     triggerPutProducto({ nombre, precio }) {
-      console.log('hola');
       const { id } = this;
       this.$store.dispatch('productosModule/putProducto', {
         nombre,
