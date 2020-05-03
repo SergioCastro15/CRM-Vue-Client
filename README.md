@@ -1,4 +1,6 @@
-# cliente-api
+# CRM-Vue-Client
+
+This CRM client was created with Vue, Vuex, Vue-Router made use of axios for the request. If you want see the backend of this app you can go to the next link : https://github.com/SergioCastro15/CRM-Node-Server
 
 ## Project setup
 ```
