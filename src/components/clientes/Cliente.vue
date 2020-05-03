@@ -18,6 +18,14 @@
               <i class="fas fa-pen-alt"></i>
               Editar Cliente
           </router-link>
+
+            <router-link
+              :to="{ name: 'NuevoPedido', params: { id: cliente._id}}"
+              class="btn btn-amarillo">
+              <i class="fas fa-plus"></i>
+              Nuevo pedido
+          </router-link>
+
           <button
               @click="$emit('deleteRequest', cliente._id)"
               type="button" class="btn btn-rojo btn-eliminar">

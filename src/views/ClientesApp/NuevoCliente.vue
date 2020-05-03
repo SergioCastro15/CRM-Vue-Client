@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import FormularioNuevoCliente from '../components/formularios/FormularioNuevoCliente';
+import FormularioNuevoCliente from '../../components/formularios/FormularioNuevoCliente';
 export default {
   components: {
     FormularioNuevoCliente,
@@ -29,7 +29,7 @@ export default {
         telefono
       };
 
-      this.$store.dispatch('postClientes', payload);
+      this.$store.dispatch('clientesModule/postClientes', payload);
       this.$router.push({
         path: '/clientes'
       });

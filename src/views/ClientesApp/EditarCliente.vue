@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import FormularioNuevoCliente from '../components/formularios/FormularioNuevoCliente';
+import FormularioNuevoCliente from '../../components/formularios/FormularioNuevoCliente';
 export default {
   components: {
     FormularioNuevoCliente,
@@ -20,11 +20,11 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch('getCliente', this.id);
+    this.$store.dispatch('clientesModule/getCliente', this.id);
   },
   computed: {
     getCliente() {
-      return this.$store.state.currentCliente;
+      return this.$store.state.clientesModule.currentCliente;
     }
   },
   methods: {
@@ -36,7 +36,7 @@ export default {
       telefono
     }) {
       const { id } = this
-      this.$store.dispatch('putClientes', {
+      this.$store.dispatch('clientesModule/putClientes', {
         nombre,
         apellido,
         empresa,
